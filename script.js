@@ -22,15 +22,26 @@ movies.push("Avengers");
 movies.pop();
 console.log(movies);
 
-var movie = {
-  title:"Avengers",
-  time:"12pm"
-};
-movie.status = "available";
-console.log(movie);
+var movieDetails = [
+{title: "Avengers",
+ time:"12pm",
+ status: "available"},
+{title: "Captain Marvel",
+ time:"2pm",
+ status: "unavailable"},
+{title: "Black Panther",
+ time:"4pm",
+ status: "available"},
+{title: "Spiderman",
+ time:"6pm",
+ status: "available"}
+];
 
-
-var movie2 = ["Avengers","Captain Marvel","Black Panther","Spiderman"];
-for (var movie of movie2){
- console.log(movie);
+for (var movie of movieDetails){
+ if (movie.status === "available"){
+ console.log("The movie " + movie.title + " plays at " + movie.time)
+ }
+else{
+ console.log("Sorry, the movie " + movie.title + " is sold out.")
+ }
 };
